@@ -1,0 +1,10 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+guard 'coffeescript', input: 'coffee', output: 'js'
+
+guard 'livereload' do
+  watch(%r{js/.+\.(css|js|html)})
+  watch(%r{style/.+\.(css|js|html)})
+  watch(%r{index.html})
+end
